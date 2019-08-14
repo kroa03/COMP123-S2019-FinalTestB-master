@@ -128,6 +128,34 @@ namespace COMP123_S2019_FinalTestB.Views
             Program.character.LastName = LastNameLabel.Text;
         }
 
+        /// <summary>
+        /// Method that generate random numbers ranging from 3 to 18 for each Ability 
+        /// (Strength, Dexterity, Constitution, Intelligence, Wisdom and Charisma)
+        /// </summary>
+        private void GenerateAbilities()
+        {
+            Program.character.Strength = $"{random.Next(1, 15)}";
+            Program.character.Dexterity = $"{random.Next(1, 15)}";
+            Program.character.Constitution = $"{random.Next(1, 15)}";
+            Program.character.Intelligence = $"{random.Next(1, 15)}";
+            Program.character.Wisdom = $"{random.Next(1, 15)}";
+            Program.character.Charisma = $"{random.Next(1, 15)}";
+        }
 
+        /// <summary>
+        ///  Click event that invokes GenerateAbilities() and and display generated values in the appropriate Label controls
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+            GenerateAbilities();
+            StrengthDataLabel.Text = Program.character.Strength;
+            DexterityDataLabel.Text = Program.character.Dexterity;
+            ConstitutionDataLabel.Text = Program.character.Constitution;
+            IntelligenceDataLabel.Text = Program.character.Intelligence;
+            WisdomDataLabel.Text = Program.character.Wisdom;
+            CharismaDataLabel.Text = Program.character.Charisma;
+        }
     }
 }
