@@ -1,4 +1,9 @@
-﻿namespace COMP123_S2019_FinalTestB.Views
+﻿/*
+ * STUDENT NAME: Koolait Roa
+ * STUDENT ID: 301034220
+ * DESCRIPTION: This is the MasterForm Designer Form - the designer form of the application
+ */
+namespace COMP123_S2019_FinalTestB.Views
 {
     partial class MasterForm
     {
