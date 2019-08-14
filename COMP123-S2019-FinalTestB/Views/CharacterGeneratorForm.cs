@@ -103,6 +103,15 @@ namespace COMP123_S2019_FinalTestB.Views
             LastNameDataLabel.Text = lname;
         }
 
-        
+
+        /// <summary>
+        /// Click Event that calls the GenerateNames method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GenerateNameButton_Click(object sender, EventArgs e)
+        {
+            GenerateNames();
+        }
     }
 }

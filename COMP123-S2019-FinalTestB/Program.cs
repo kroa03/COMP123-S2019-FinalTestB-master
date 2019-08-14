@@ -16,6 +16,7 @@ namespace COMP123_S2019_FinalTestB
     public static class Program
     {
         public static CharacterGeneratorForm characterForm;
+        public static Character character = new Character();
 
         /// <summary>
         /// The main entry point for the application.
