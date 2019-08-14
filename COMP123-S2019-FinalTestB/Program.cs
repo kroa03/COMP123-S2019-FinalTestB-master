@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// to access files on the Objects folder
+using COMP123_S2019_FinalTestB.Objects;
 
 /*
  * STUDENT NAME: Koolait Roa

@@ -638,6 +638,7 @@ namespace COMP123_S2019_FinalTestB.Views
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CharacterGeneratorForm";
             this.Text = "Character Generator";
+            this.Load += new System.EventHandler(this.CharacterGeneratorForm_Load);
             this.MainTabControl.ResumeLayout(false);
             this.IdentityPage.ResumeLayout(false);
             this.IdentityTableLayoutPanel.ResumeLayout(false);

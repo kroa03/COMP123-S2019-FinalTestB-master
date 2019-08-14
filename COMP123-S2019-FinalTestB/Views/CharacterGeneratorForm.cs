@@ -61,12 +61,11 @@ namespace COMP123_S2019_FinalTestB.Views
         public void LoadNames()
         {
             // textreader object to store the files
-            TextReader firstNamesFile = new StreamReader("..\\..\\Data\\firstNames.txt");
-            TextReader lastNamesText = new StreamReader("..\\..\\Data\\lastNames.txt");
+            TextReader firstNamesFile = new StreamReader(@"..\..\Data\firstNames.txt");
+            TextReader lastNamesFile = new StreamReader(@"..\..\Data\lastNames.txt");
 
             // reads a line of characters from the text reader object
             string line = firstNamesFile.ReadLine();
-
             // loop that would read every line of the file and add each to the list
             while (line != null)
             {
@@ -77,14 +76,14 @@ namespace COMP123_S2019_FinalTestB.Views
             firstNamesFile.Close();
 
 
-            line = lastNamesText.ReadLine();
+            line = lastNamesFile.ReadLine();
             while (line != null)
             {
                 LastNameList.Add(line);
-                line = lastNamesText.ReadLine();
+                line = lastNamesFile.ReadLine();
             }
             LastNameList.Add(line);
-            lastNamesText.Close();
+            lastNamesFile.Close();
         }
 
         /// <summary>
@@ -103,6 +102,16 @@ namespace COMP123_S2019_FinalTestB.Views
             LastNameDataLabel.Text = lname;
         }
 
+        /// <summary>
+        /// Call the LoadNames method and call the GenerateNames method upon Form load event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CharacterGeneratorForm_Load(object sender, EventArgs e)
+        {
+            LoadNames();
+            GenerateNames();
+        }
 
         /// <summary>
         /// Click Event that calls the GenerateNames method
@@ -112,6 +121,13 @@ namespace COMP123_S2019_FinalTestB.Views
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
+
+            // set the value of the FirstName and LastName property of the Program.character object 
+            // to the value of text property of the FirstNameDataLabel and LastNameLabel control 
+            Program.character.FirstName = FirstNameLabel.Text;
+            Program.character.LastName = LastNameLabel.Text;
         }
+
+
     }
 }

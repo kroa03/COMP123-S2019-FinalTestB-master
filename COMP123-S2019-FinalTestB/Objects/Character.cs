@@ -15,6 +15,7 @@ namespace COMP123_S2019_FinalTestB.Objects
 {
     public class Character
     {
+        public string CharacterName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
